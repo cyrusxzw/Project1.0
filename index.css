@@ -1,0 +1,72 @@
+.container {
+    width: 1080px;
+    margin: 0 auto;
+    padding:20px;
+}
+
+.form-details {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 30px;
+}
+
+.form-details input {
+    height:40px;
+    width: 100%;
+    outline: none;
+}
+
+.toppings {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.toppings img {
+    width: 30px;
+    margin-right: 10px;
+    background: #e0dede;
+    padding:4px;
+}
+
+.toppings-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    background: #eee8e8;
+    height:40px;
+}
+
+.toppings-container span {
+    cursor: pointer;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    line-height: 40px;
+    padding-left: 5px;
+}
+
+.summary-container li {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
+}
+
+.price, .total {
+    text-align: right;
+}
+
+.place-order {
+    color:white;
+    background: rgb(95, 196, 95);
+    border:0;
+    border-radius: 5px;
+    width: 100%;
+    height:40px;
+    margin-top: 30px;
+    outline: none;
+}
+
+.toppings-container.active span {
+    background: lightblue;
+}

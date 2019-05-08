@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pizza Creator</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./index.css">
+    <script src="./index.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Enter your details</h1>
+        <div class="form-details">
+            <div class="form-sub-container">
+                <h5>NAME</h5>
+                <input type="text" name="name" id="">
+            </div>
+            <div class="form-sub-container">
+                <h5>EMAIL</h5>
+                <input type="text" name="email" id="">
+            </div>
+            <div class="form-sub-container">
+                <h5>CONFIRM</h5>
+                <input type="text" name="confirm" id="">
+            </div>
+            <div class="form-sub-container">
+                <h5>ADDRESS</h5>
+                <input type="text" name="address" id="">
+            </div>
+            <div class="form-sub-container">
+                <h5>POSTCODE</h5>
+                <input type="text" name="postCode" id="">
+            </div>
+            <div class="form-sub-container">
+                <h5>CONTACT NUMBER</h5>
+                <input type="text" name="number" id="">
+            </div>
+        </div>
+        <h1>Pick your toppings</h1>
+        <div class="toppings">
+            <div class="toppings-container" data-name="Anchovy" data-price="0.69">
+                <img src="./img/download.svg" alt="">
+                <span>Anchovy</span>
+            </div>
+            <div class="toppings-container" data-name="Bacon" data-price="0.69">
+                <img src="./img/download1.svg" alt="">
+                <span>Bacon</span>
+            </div>
+            <div class="toppings-container" data-name="Basil" data-price="0.69">
+                <img src="./img/download2.svg" alt="">
+                <span>Basil</span>
+            </div>
+            <div class="toppings-container" data-name="Chili" data-price="0.69">
+                <img src="./img/download3.svg" alt="">
+                <span>Chili</span>
+            </div>
+            <div class="toppings-container" data-name="Mushroom" data-price="0.69">
+                <img src="./img/download4.svg" alt="">
+                <span>Mushroom</span>
+            </div>
+            <div class="toppings-container" data-name="Olive" data-price="0.69">
+                <img src="./img/download5.svg" alt="">
+                <span>Olive</span>
+            </div>
+            <div class="toppings-container" data-name="Onion" data-price="0.69">
+                <img src="./img/download6.svg" alt="">
+                <span>Onion</span>
+            </div>
+            <div class="toppings-container" data-name="Tomato" data-price="0.69">
+                <img src="./img/download7.svg" alt="">
+                <span>Tomato</span>
+            </div>
+        </div>
+        <div class="summary">
+            <h1>Order Summary</h1>
+            <div class="summary-container">
+            </div>
+            <hr>
+            <div class="total" data-total="9.99">Total: $9.99</div>
+            <input type="button" value="Place Order" class="place-order">
+        </div>
+    </div>
+</body>
+
+</html>
