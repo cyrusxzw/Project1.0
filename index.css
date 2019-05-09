@@ -49,12 +49,13 @@
 .summary-container li {
     list-style-type: none;
     display: grid;
-    grid-template-columns: 1fr, 1fr;
+    grid-template-columns: auto auto auto 1fr auto;
+    grid-gap: 5px;
+    margin-bottom: 10px;
 }
 
 .price, .total {
     text-align: right;
-    
 }
 
 .place-order {

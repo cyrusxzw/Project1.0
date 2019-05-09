@@ -1,4 +1,12 @@
 
+function addAmount () {
+    
+}
+
+function minuAmount () {
+
+}
+
 function pickTopping() {
     const toppings = document.querySelectorAll('.toppings-container');
     const summary = document.querySelector('.summary-container');
@@ -10,13 +18,21 @@ function pickTopping() {
             if (!topping.classList.contains('active')) {
                 topping.classList.add('active');
                 const li = document.createElement('li');
+
+                const addBtn = document.createElement('button');
+                const minusBtn = document.createElement('button');
+                const amount = document.createElement('span');
+                addBtn.innerText = '+';
+                minusBtn.innerText = '-';
+                amount.innerText = '* 1';
+
                 const itemName = document.createElement('div');
                 itemName.innerText = name;
                 const itemPrice = document.createElement('div');
                 itemPrice.classList.add('price');
                 itemPrice.innerText = price;
                 li.dataset.name = name;
-                li.append(itemName, itemPrice);
+                li.append(addBtn, minusBtn, itemName, amount, itemPrice);
                 summary.append(li);
                 totalPrice = parseFloat(totalPrice) + parseFloat(price);
             }
