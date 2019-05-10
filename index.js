@@ -1,11 +1,7 @@
-
-function addAmount () {
-    
-}
-
-function minuAmount () {
+function updateListItemPriceByNewAmount() {
 
 }
+
 
 function pickTopping() {
     const toppings = document.querySelectorAll('.toppings-container');
@@ -22,10 +18,38 @@ function pickTopping() {
                 const addBtn = document.createElement('button');
                 const minusBtn = document.createElement('button');
                 const amount = document.createElement('span');
+                amount.className = 'amount';
+                let amountNumber = 1;
+                li.dataset.amount = amountNumber;
                 addBtn.innerText = '+';
+                addBtn.onclick = () => {
+                    let {total:totalPrice} = total.dataset;
+                    li.dataset.amount = parseInt(li.dataset.amount) + 1;
+                    let newAmount = li.dataset.amount;
+                    li.querySelector('.amount').innerText = `* ${newAmount}`;
+                    let newPrice = price * newAmount;
+                    li.querySelector('.price').innerText = newPrice;
+                    const newTotalPrice = +totalPrice + +price;
+                    total.innerText = `$ ${newTotalPrice}`;
+                    total.dataset.total = newTotalPrice;
+                };
                 minusBtn.innerText = '-';
-                amount.innerText = '* 1';
-
+                minusBtn.onclick = () => {
+                    let {total:totalPrice} = total.dataset;
+                    let newAmount = +li.dataset.amount -1;
+                    if (newAmount == 0){
+                        topping.onclick();
+                        return;
+                    }
+                    li.dataset.amount = newAmount;
+                    li.querySelector('.amount').innerText = `* ${newAmount}`;
+                    let newPrice = price * newAmount;
+                    li.querySelector('.price').innerText = newPrice;
+                    const newTotalPrice = +totalPrice - +price;
+                    total.innerText = `$ ${newTotalPrice}`;
+                    total.dataset.total = newTotalPrice;
+                };
+                amount.innerText = `* ${amountNumber}`;
                 const itemName = document.createElement('div');
                 itemName.innerText = name;
                 const itemPrice = document.createElement('div');
